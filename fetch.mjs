@@ -8,7 +8,7 @@ const fetch = async (count) => {
     ? `+${now.getTime() - lastRequestAt.getTime()}ms`
     : "";
 
-  console.log(`${count.toString().padStart(3)}. ${timeSinceLastRequest}`);
+  console.log(`${now.toISOString()} ${count.toString().padStart(3)}. ${timeSinceLastRequest}`);
 
   const response = await undici.fetch(
     "https://app.runn-testing.net/api/v0/teams",
@@ -27,7 +27,7 @@ const fetch = async (count) => {
 
   lastRequestAt = responseFinishedAt;
 
-  console.log(`     ${duration} ${response.status} ${response.statusText}`);
+  console.log(`${responseFinishedAt.toISOString()}      ${duration} ${response.status} ${response.statusText}`);
 };
 
 export { fetch };
