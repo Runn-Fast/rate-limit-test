@@ -19,7 +19,7 @@ const fetchManyWithQueue = async (numberOfRequests) => {
 };
 
 const main = async () => {
-  const numberOfRequests = 200;
+  const numberOfRequests = 120 * 10;
   await fetchManyWithQueue(numberOfRequests);
 };
 
