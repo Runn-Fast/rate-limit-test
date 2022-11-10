@@ -4,7 +4,7 @@ import { fetch } from "./fetch.mjs";
 
 const queue = new Queue({
   concurrency: 1,
-  intervalCap: 120,
+  intervalCap: 100,
   interval: 1000 * 60,
 });
 
