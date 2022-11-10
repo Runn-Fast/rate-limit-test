@@ -4,13 +4,13 @@ specifiers:
   p-limit: 4.0.0
   p-queue: 7.3.0
   p-throttle: 5.0.0
-  undici: 5.11.0
+  undici: 5.12.0
 
 dependencies:
   p-limit: 4.0.0
   p-queue: 7.3.0
   p-throttle: 5.0.0
-  undici: 5.11.0
+  undici: 5.12.0
 
 packages:
 
@@ -55,8 +55,8 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: false
 
-  /undici/5.11.0:
-    resolution: {integrity: sha512-oWjWJHzFet0Ow4YZBkyiJwiK5vWqEYoH7BINzJAJOLedZ++JpAlCbUktW2GQ2DS2FpKmxD/JMtWUUWl1BtghGw==}
+  /undici/5.12.0:
+    resolution: {integrity: sha512-zMLamCG62PGjd9HHMpo05bSLvvwWOZgGeiWlN/vlqu3+lRo3elxktVGEyLMX+IO7c2eflLjcW74AlkhEZm15mg==}
     engines: {node: '>=12.18'}
     dependencies:
       busboy: 1.6.0
