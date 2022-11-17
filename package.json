@@ -1,18 +1,20 @@
 {
-  "name": "rate-limit-test",
+  "name": "@runn/rate-limit-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/index.mjs",
+    "tidy": "prettier --write ./src"
   },
   "keywords": [],
   "author": "George Czabania",
   "license": "ISC",
   "dependencies": {
-    "p-limit": "4.0.0",
-    "p-queue": "7.3.0",
-    "p-throttle": "5.0.0",
+    "colorette": "2.0.19",
     "undici": "5.12.0"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }
