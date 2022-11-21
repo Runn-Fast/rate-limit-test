@@ -22,8 +22,34 @@ const log = (direction, args, value) => {
   );
 };
 
+const logHistory = (history) => {
+  const oldestEntry = history[0];
+  const timeSinceOldestEntryMs = oldestEntry ? Date.now() - oldestEntry : 0;
+  const historyPeriod = Math.round(timeSinceOldestEntryMs / 1000);
+
+  const length = history.length;
+  const avgMs = length ? Math.round(timeSinceOldestEntryMs / length) : 0;
+
+  console.log(
+    [
+      "".padStart(10),
+      "".padStart(8),
+      "".padStart(7),
+      c.green(
+        `${length} requests in ${historyPeriod} seconds. Average request time is ${avgMs}ms`
+      ),
+    ].join(c.gray(", "))
+  );
+};
+
 const withCounter = (fn) => {
+  let history = [];
+
   return async (...args) => {
+    const now = Date.now();
+    history = history.filter((value) => value >= now - 60 * 1000);
+    history.push(now);
+    logHistory(history);
     log("→", args);
     const result = await fn(...args);
     log("←", args, result);

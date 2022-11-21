@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "colorette": "2.0.19",
+    "p-queue": "7.3.0",
     "undici": "5.12.0"
   },
   "devDependencies": {
