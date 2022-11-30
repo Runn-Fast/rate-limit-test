@@ -13,7 +13,8 @@ const fetch = async (i) => {
   );
   await response.text();
 
-  return [response.status, response.statusText];
+  const cfRay = response.headers.get("cf-ray") ?? "";
+  return [response.status, response.statusText, cfRay];
 };
 
 export { fetch };

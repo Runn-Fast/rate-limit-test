@@ -53,6 +53,7 @@ const withCounter = (fn) => {
     log("→", args);
     const result = await fn(...args);
     log("←", args, result);
+    return result;
   };
 };
 
