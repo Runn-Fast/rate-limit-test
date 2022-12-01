@@ -16,16 +16,7 @@ const request = withRateLimit(
 const main = async () => {
   let i = 1;
   while (true) {
-    // make 10 requests in parallel
-    await Promise.all([
-      request(i),
-      request(i + 1),
-      request(i + 2),
-      request(i + 3),
-      request(i + 4),
-    ]);
-
-    i += 5;
+    request(i), (i += 1);
   }
 };
 
