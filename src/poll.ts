@@ -27,8 +27,8 @@ const main = async () => {
       request(i + 7),
       request(i + 8),
       request(i + 9),
-    ])
-    i += 10
+    ]);
+    i += 10;
   }
 };
 

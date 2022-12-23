@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/spam.mjs",
+    "spam": "node ./src/spam.mjs",
+    "poll": "node ./src/poll.mjs",
     "tidy": "prettier --write ./src"
   },
   "keywords": [],
