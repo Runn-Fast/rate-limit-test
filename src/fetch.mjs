@@ -7,7 +7,7 @@ const fetch = async (i) => {
       method: "GET",
       headers: {
         // api key for user@example.com on runn-testing.net
-        Authorization: "Bearer LIVE_osagZcJfU9Vza53ULMgx",
+        Authorization: "Bearer TEST_5xAF8y_ujFiHeZwUhJvM",
       },
     }
   );
