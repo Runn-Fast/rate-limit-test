@@ -3,7 +3,7 @@ import { withCounter } from "./with-counter.mjs";
 import { withRateLimit } from "./with-rate-limit.mjs";
 import { withDelay } from "./with-delay.mjs";
 
-const RATE_LIMIT_REQUESTS = 120 - 1;
+const RATE_LIMIT_REQUESTS = 120;
 const RATE_LIMIT_PERIOD = 60 * 1000;
 
 const fetchWithCount = withDelay(withCounter(fetch));

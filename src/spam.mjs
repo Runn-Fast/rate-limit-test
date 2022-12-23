@@ -1,9 +1,10 @@
 import { fetch } from "./fetch.mjs";
 import { withCounter } from "./with-counter.mjs";
+import { withDelay } from "./with-delay.mjs"
 
-const fetchWithCount = withCounter(fetch);
+const fetchWithCount = withDelay(withCounter(fetch));
 
-const RATE_LIMIT_REQUESTS = 120;
+const RATE_LIMIT_REQUESTS = 360;
 
 const main = async () => {
   await Promise.all(
